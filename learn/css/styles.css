@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+/*
+    flex container 사용
+    가장 가까운 부모가 자식의 위치를 움직일 수 있음
+    flex-direction 은 행 열로 구분 가능 column row
+    
+    justify-content
+    main axis 방향으로 자식태그 위치 조정 (가로)
+    align-item
+    cross axis 방향으로 자식태그 위치 조정 (세로)
+*/
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: peru;
+  color: white;
+}
+
+.box:nth-child(2) {
+  align-self: center;
+  order: 1;
+}
+/*
+  order는 default값이 0이므로
+  1, 3은 0이기 때문에 order를 1로 주면
+  2번째 박스가 맨 뒤로 감
+*/
+
+.box:nth-child(3) {
+  align-self: flex-end;
+}
+
+/*
+  align-self
+  1개만 변경
+*/
