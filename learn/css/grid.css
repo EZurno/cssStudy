@@ -1,0 +1,17 @@
+.grids {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 200px 100px 300px;
+  column-gap: 10px;
+  row-gap: 10px;
+  /*gap : 10px*/
+}
+
+.templates {
+  background-color: gray;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
