@@ -1,0 +1,46 @@
+.grids {
+  display: grid;
+  gap: 10px;
+  height: 95vh;
+  grid-template:
+    [header-start] "header header header header" 1fr [header-end]
+    [content-start] "content content content nav" 4fr [content-end]
+    [footer-start] "footer footer footer footer" 1fr [footer-end] / 1fr 1fr 1fr 1fr;
+  /*
+  justify-items : center; // default 값 stretch
+  align-itmes : start;
+  =>
+  place-items : center start;
+
+  items는 grid 속 격자
+  content 는 grid 자체를 움직인다고 보면 된다.
+  justify-content : space-evenly;
+  =>
+  place-content : end center;
+  */
+}
+/*
+    template 사용 시 옆에 fr로 높이를 분할 해줌
+    / ~ 1fr 은 각 width 의 fr
+    여기서는 repeat 적용 x
+*/
+
+.header {
+  background-color: #2ecc71;
+  grid-area: header;
+}
+
+.content {
+  background-color: #3498db;
+  grid-area: content;
+}
+
+.nav {
+  background-color: rebeccapurple;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: orange;
+  grid-area: footer;
+}

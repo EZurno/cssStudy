@@ -1,0 +1,37 @@
+.grids {
+  display: grid;
+  /*grid-template-columns: repeat(4, 100px);*/
+  grid-template-columns: repeat(4, 1fr);
+  /*
+    fr => fraction
+    사용가능한 공간 분할
+    width가 제약이 없으므로 화면 크기에 따라 fr 크기가 달라짐
+    => width 값을 주면 fr도 작아짐
+
+    fr은 grid가 높이는 없으므로 height를 정해주고 row에 적용해야 함
+  */
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+}
+
+.header {
+  background-color: #2ecc71;
+  grid-column: span 4; /* 시작 지점부터 4개의 cell 만큼 span */
+}
+
+.content {
+  background-color: #3498db;
+  grid-column: 1 / 4; /* 1에서 부터 4 까지*/
+  grid-row: 2 / span 2;
+}
+
+.nav {
+  background-color: rebeccapurple;
+  grid-column: 4 / 5;
+  grid-row: 2 / 4;
+}
+
+.footer {
+  background-color: orange;
+  grid-column: 1 / -1; /* 끝나는 지점을 생각하지 않아도 -1을 사용하면 해결*/
+}

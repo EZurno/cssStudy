@@ -1,0 +1,25 @@
+.grids {
+  color: white;
+  display: grid;
+  gap: 5px;
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
+}
+
+.item:nth-child(odd) {
+  background-color: gray;
+}
+
+.item:nth-child(even) {
+  background-color: darkgray;
+}
+
+.grids:first-child {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  /* auto-fill은 최소 크기대롤 grid를 구성 => 100px 이므로 100px 대로 배열, 빈공간 생김 */
+}
+
+.grids:last-child {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* auto-fit은 최대 크기대롤 grid를 구성 => 1fr 이므로 꽉채움 */
+}

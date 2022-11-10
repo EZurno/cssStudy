@@ -1,0 +1,24 @@
+.grid {
+  color: white;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(5, minmax(min-content, 1fr));
+  /*
+    grid-template-columns: max-content min-content;
+
+    max-content, min-content
+    box content 가 가질 수 있는 크기의 max min 만큼
+    content 도 max min 할 수 있게 해줌
+    (반응형 웹)
+  */
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
+}
+
+.item:nth-child(odd) {
+  background-color: gray;
+}
+
+.item:nth-child(even) {
+  background-color: darkgray;
+}
