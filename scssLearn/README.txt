@@ -1,0 +1,5 @@
+ - Install NodeJS
+ - view -> view terminal
+ - git clone https://github.com/serranoarevalo/scss-boilerplate .
+ - npm i
+ - npm run dev
