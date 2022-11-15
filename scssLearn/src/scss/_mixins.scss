@@ -1,0 +1,21 @@
+@mixin titles {
+  color: blue;
+  font-size: 30px;
+}
+
+// @mixin links($color) {
+//   text-decoration: none;
+//   display: block;
+//   color: $color;
+// }
+
+@mixin links($word) {
+  text-decoration: none;
+  display: block;
+
+  @if $word == "odd" {
+    color: blue;
+  } @else {
+    color: red;
+  }
+}
