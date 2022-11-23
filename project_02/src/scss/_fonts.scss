@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+@mixin font1 {
+  font-family: "EB Garamond", serif;
+}
+
+@mixin font3 {
+  font-family: "Lobster", cursive;
+}
+
+@mixin font2 {
+  font-family: "Patrick Hand", cursive;
+}
