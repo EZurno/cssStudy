@@ -1,0 +1,17 @@
+%menu {
+  background: white;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $fontSize;
+  color: $fontColor;
+
+  transition: color 0.3s linear, background 0.3s linear;
+
+  &:hover {
+    color: white;
+    background: $fontColor;
+  }
+}
