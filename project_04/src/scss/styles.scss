@@ -1,0 +1,108 @@
+@import "_font.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  margin: 0;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+
+  .left {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    transition: background 0.3s linear, color 0.3s linear;
+
+    color: $gray;
+
+    &:hover {
+      color: $white;
+      background: $gray;
+    }
+
+    #logo {
+      color: $black;
+      margin-right: 70px;
+      padding-left: 10px;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    h1 {
+      @include font1();
+      @extend %margin;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+
+    transition: background 0.3s linear;
+
+    &:hover {
+      background: $gray;
+    }
+
+    .rightIn {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        padding-left: 10px;
+        @extend %margin;
+        @include font1();
+      }
+    }
+
+    .word {
+      h4 {
+        padding-right: 10px;
+        text-align: right;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 11fr 1fr;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: opacity 0.2s linear;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    padding: 0 10px;
+    @include font2();
+  }
+}

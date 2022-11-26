@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+
+$black: black;
+$gray: #e0e1e2;
+$white: white;
+
+@mixin font1() {
+  font-size: 30px;
+  font-family: "Alexandria", sans-serif;
+  font-weight: bold;
+}
+
+@mixin font2() {
+  font-size: 14px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+%margin {
+  margin: 0 48px 0 0;
+}
