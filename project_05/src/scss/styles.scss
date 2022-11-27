@@ -1,0 +1,251 @@
+@import "_fonts.scss";
+@import "_buttons.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  height: 120px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #logo {
+    cursor: pointer;
+    @include font1();
+    font-size: $logoSize;
+  }
+  .navBoxLeft {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+
+    .menu {
+      @include font2();
+      font-size: $menuSize;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+    }
+  }
+  .navBoxRight {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.article {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 60%;
+    height: 60%;
+    overflow: hidden;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 64px;
+
+    h2 {
+      @include font2();
+      font-size: 32px;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 150px;
+
+    .textIn {
+      width: $commonWidth;
+      #info {
+        @include font2();
+        font-size: 32px;
+      }
+
+      #about {
+        font-size: 18px;
+        margin-right: 32px;
+        @include font3();
+      }
+    }
+
+    .viewCompany {
+      display: flex;
+      width: $commonWidth;
+      font-size: 18px;
+
+      #moveText {
+        margin-left: 10px;
+        transition: margin-left 0.3s linear;
+        @include font3();
+
+        &:hover {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .listItem {
+      padding: 20px 0;
+      width: $commonWidth;
+      border-top: 1px solid gray;
+      display: flex;
+      justify-content: space-between;
+
+      @include font2();
+
+      &:nth-child(even) {
+        .itemInfo {
+          order: 1;
+        }
+      }
+
+      .itemInfo {
+        width: $imgGap;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-size: $itemNameSize;
+          margin-top: 0;
+          @include font3();
+        }
+
+        h2 {
+          font-size: $itemInfoSize;
+        }
+
+        .more {
+          align-self: flex-start;
+          justify-self: end;
+          font-size: $moreSize;
+          font-weight: bold;
+
+          display: flex;
+
+          .button {
+            @extend %button;
+            font-size: $moreSize;
+          }
+        }
+      }
+    }
+
+    .itemImg {
+      width: $imgGap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .itemImg2 {
+      width: $imgGap;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: $itemNameSize;
+
+      img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        max-width: 100%;
+      }
+
+      .button {
+        @extend %button;
+        font-size: $moreSize;
+      }
+
+      h1 {
+        @include font3();
+        font-size: $itemNameSize;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 0;
+  margin-top: 80px;
+  height: 320px;
+  background: #464646;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footerInfo {
+    width: $commonWidth;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+
+    .companyInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 100%;
+
+      h1 {
+        @include font1();
+        margin-top: 5px;
+      }
+
+      h2 {
+        @include font2();
+        font-size: $moreSize;
+        width: 50%;
+      }
+    }
+
+    .companyItems {
+      display: flex;
+      justify-content: space-around;
+
+      h2 {
+        @include font2();
+        font-size: $moreSize;
+        width: 50%;
+      }
+    }
+  }
+}
